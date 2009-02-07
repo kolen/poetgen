@@ -12,6 +12,7 @@ use CGI qw/:standard/;
 my $lines = [];
 my $current_matching = [];
 my $replace = {};
+my $titles = [];
 
 open(my $f, "lines.txt");
 for (<$f>) {
@@ -32,6 +33,12 @@ for (<$f>) {
 
   next unless $#words;
   $replace->{$words[0]} = \@words;
+}
+close $f;
+
+open($f, "titles.txt");
+for (<$f>) {
+  push @$titles, $_ if /\S/;
 }
 close $f;
 
@@ -70,6 +77,11 @@ sub replace_tokens
   return $_;
 }
 
+sub generate_title
+{
+  return $titles->[rand(scalar @$titles)];
+}
+
 sub generate_4
 {
   my @lines = (generate_pair(), generate_pair());
@@ -103,7 +115,9 @@ sub show_page
     $poetry .= "<br/><br/>" if ($i!=$count_4s-1);
   }
 
-  $content =~ s/!POETRY/$poetry/;
+  my $title = generate_title();
+  $content =~ s/!TITLE/$title/g;
+  $content =~ s/!POETRY/$poetry/g;
 
   print header(-charset=>'utf-8');
   print $content;

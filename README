@@ -6,4 +6,6 @@ lines.txt contains lines for poetry. Rhyming line groups are separated with blan
 
 replace.txt contains words or phrases that are randomly replaced. Words are separated with spaces, phrases with multiple words can be enclosed in double quotes.
 
-template.html is template file. Use !POETRY tag to set poetry insertion place.
+template.html is template file. Use !POETRY tag to set poetry insertion place, !TITLE outputs poetry title.
+
+titles.txt contains newline-separated titles.
