@@ -1,14 +1,89 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--Робоготесса Некромаша старается для вас 
+ (oo)
+ /~~\
+||† ||
+ |  |
+ O==O
+-->
 <html>
 <head>
-<title>Генератор готическихъ стиховъ</title>
+<style>
+body {
+ background: #303030 URL(bg.gif) repeat-x top;
+ color: #bdbdbd;
+
+ font-family: Georgia, serif;
+ line-height: 150%;
+ font-size: 11pt;
+ padding: 0;
+ margin: 0;
+}
+a:link, a:visited, a:hover {
+ color: #aaa;
+}
+#poetry {
+ margin-left: 200px;
+ margin-top: 100px;
+}
+h1 {
+ text-align: center;
+ border-bottom: 1px solid #bdbdbd;
+ font-style: Italic;
+}
+#sputnik {
+ position: absolute;
+ background: URL(sputnik.jpg);
+ width: 66px;
+ height: 108px;
+ right: 0;
+ top: 170px;
+}
+#refresh {
+ margin-left: 100px;
+ margin-top: 30px;
+}
+#bottom {
+ position: absolute;
+ bottom: 0;
+}
+</style>
+<title>Генератор готических стихов</title>
 </head>
 <body>
-<h1></h1>
-
+<h1>Генератор Готических Стихов<sup>beta</sup></h1>
 <div id="poetry">
-<h1>!TITLE</h1>
-
+<h2>!TITLE</h2>
 !POETRY
+
+
+<div id="refresh"><a href="javascript:window.location.reload();">&#8224; Еще&#8230; &#8224;</a></div>
 </div>
+<div id="sputnik"></div>
+
+<div id="bottom">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t23.5;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+<a href="http://schmerz.ru/">schmerz.ru</a> | <a href="http://github.com/kolen/poetgen/">source code</a>
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-381584-9");
+pageTracker._trackPageview();
+} catch(err) {}</script>
 </body>
 </html>
