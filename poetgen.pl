@@ -94,8 +94,20 @@ sub generate_4
     $_ = decode('utf-8', $_);
     s/^(.)/uc($1)/e;
     $_ = encode('utf-8', $_);
+
+    $_ .= "..." if (rand()>0.5);
+    $_ = caligraphy($_);
   }
   return @lines;
+}
+
+
+sub caligraphy
+{
+  shift;
+  s/\.\.\./&#8230;/g;
+  s/ -{1,3} / &#8212; /g;
+  return $_;
 }
 
 sub show_page
