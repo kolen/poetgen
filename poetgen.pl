@@ -131,7 +131,7 @@ sub show_page
   $content =~ s/!TITLE/$title/g;
   $content =~ s/!POETRY/$poetry/g;
 
-  print header(-charset=>'utf-8');
+#  print header(-charset=>'utf-8');
   print $content;
 }
 
